@@ -1,0 +1,108 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="news-banner wow zoomIn" data-wow-delay="0.2s">
+      <img src="http://lorempixel.com/248/248/people/{{id}}" class="" />
+    </div>
+
+    <div class="news-links">
+      <ul class="breadcrumb" style="margin-bottom: 5px;">
+        <li><a href="javascript:void(0)" [routerLink]="['/newslist']">Home</a></li>
+        <li><a href="javascript:void(0)">Trending</a></li>
+      </ul>
+    </div>
+
+    <div class="panel panel-default unstyled-panel">
+      <div class="panel-body">
+        <h4 class="title  wow slideInUp" data-wow-delay="0.6s">{{responseData[id].title}}</h4>
+        <p class="desc  wow slideInUp" data-wow-delay="0.8s">{{responseData[id].description}}</p>
+
+
+        <div class="share-icons">
+          <a href="javascript:void(0)" class="btn btn-default btn-fab btn-icon-fb  wow zoomIn" data-wow-delay="1s"><i class="ion-social-facebook"></i></a>
+          <a href="javascript:void(0)" class="btn btn-default btn-fab btn-icon-whatsapp  wow zoomIn" data-wow-delay="1.2s"><i class="ion-social-whatsapp"></i></a>
+          <a href="javascript:void(0)" class="btn btn-deafult btn-fab btn-icon-twitter  wow zoomIn" data-wow-delay="1.4s"><i class="ion-social-twitter"></i></a>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="row">
+   <div class="col-xs-12">
+    <ul class="pagination pagination-sm">
+      <li class="disabled"><a href="javascript:void(0)">«</a></li>
+      <li><a href="javascript:void(0)">1</a></li>
+      <li><a href="javascript:void(0)">»</a></li>
+    </ul>
+   </div>
+  </div>
+
+  <div class="row">
+    <table class="table table-striped table-hover ">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Column heading</th>
+          <th>Column heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let state of episodes ; let i = index"> 
+          <td>{{i+1}}</td>
+          <td>{{state.title}}</td>
+          <td>{{state.director}}</td>
+        </tr>
+        <!-- <tr>
+          <td>2</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="">
+          <td>3</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="">
+          <td>4</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="">
+          <td>5</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="">
+          <td>6</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="">
+          <td>7</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr> -->
+      </tbody>
+    </table>
+
+    <!-- <div class="row">
+      <div class="col-sm-12" *ngFor="let state of list">
+          <div class="card card-block">
+              <h4 class="card-title">{{ state.title }}</h4>
+              <p class="card-text">
+                  {{ state.content }}
+              </p>
+          </div>
+      </div>
+  </div> -->
+  
+  </div>
+</div>
